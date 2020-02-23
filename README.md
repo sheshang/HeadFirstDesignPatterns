@@ -1,2 +1,2 @@
-# HeadFirstDesignPatterns
-This repo contains the examples created while reading the HeadFirst Design Patterns
+# Strategy Pattern
+## Example: Duck Simulator with extensible behaviors.
