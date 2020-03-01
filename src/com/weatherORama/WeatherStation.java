@@ -9,3 +9,4 @@ public class WeatherStation {
         weatherData.setMeasurements(23, 34,10);
     }
 }
+
