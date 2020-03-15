@@ -29,9 +29,7 @@ public class Whip extends CondimentDecorator {
             case VENTI:
                 return 0.10 * 2 + beverage.cost();
             default:
-                break;
+                return 0.10 + beverage.cost();
         }
-
-        return 0.10 + beverage.cost();
     }
 }

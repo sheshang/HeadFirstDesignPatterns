@@ -24,9 +24,7 @@ public class Espresso extends Beverage {
             case VENTI:
                 return 1.99 * 2;
             default:
-                break;
+                return 1.99;
         }
-
-        return 1.99;
     }
 }

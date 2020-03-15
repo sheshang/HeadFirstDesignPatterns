@@ -24,9 +24,7 @@ public class DarkRoast extends Beverage {
             case VENTI:
                 return 0.99 * 2;
             default:
-                break;
+                return 0.99;
         }
-
-        return 0.99;
     }
 }

@@ -29,9 +29,7 @@ public class Mocha extends CondimentDecorator {
             case VENTI:
                 return 0.20 * 2 + beverage.cost();
             default:
-                break;
+                return 0.20 + beverage.cost();
         }
-
-        return 0.20 + beverage.cost();
     }
 }

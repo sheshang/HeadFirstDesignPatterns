@@ -29,9 +29,7 @@ public class Soy extends CondimentDecorator {
             case VENTI:
                 return 0.15 * 2 + beverage.cost();
             default:
-                break;
+                return 0.15 + beverage.cost();
         }
-
-        return 0.15 + beverage.cost();
     }
 }

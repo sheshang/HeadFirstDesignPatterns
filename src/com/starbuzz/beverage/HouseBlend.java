@@ -24,9 +24,7 @@ public class HouseBlend extends Beverage {
             case VENTI:
                 return 0.89 * 2;
             default:
-                break;
+                return 0.89;
         }
-
-        return 0.89;
     }
 }
