@@ -1,2 +1,2 @@
-# HeadFirstDesignPatterns
-This repo contains the examples created while reading the HeadFirst Design Patterns
+# Notes
+This branch is a collection of notes made through the process of reading the book.
