@@ -1,9 +1,10 @@
 package com.pizzeria.store;
 
 import com.pizzeria.pizza.Pizza;
+import com.pizzeria.util.PizzaType;
 
 public abstract class PizzaStore {
-    public Pizza orderPizza(String type){
+    public Pizza orderPizza(PizzaType type){
         Pizza pizza;
 
         pizza = createPizza(type);
@@ -16,5 +17,5 @@ public abstract class PizzaStore {
         return pizza;
     }
 
-    protected abstract Pizza createPizza(String type);
+    protected abstract Pizza createPizza(PizzaType type);
 }
