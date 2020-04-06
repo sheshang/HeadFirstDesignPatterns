@@ -1,0 +1,27 @@
+* Factory method has parallel class hierarchies. One class hierarchy is for creator classes, where factory method of the concrete classes returns the product. Other is the product class hierarchy, where concrete classes encapsulate all the knowledge about the products each concrete factory method creates.
+
+* Abstract creator class has abstarct factory method, by which it lets subclass  decide on the product creation, while all the other methods in the abstract creator class are written to operate on the product returned by the factory method.
+
+* It is not compulsory to have factory method and creator class abstract. We can have default fctory method too to produce concrete products.
+
+* Factory method can be parameterized (in that case, it can produce various types of product) or non-parameterized (it produces a fixed kind of concrete product).
+
+* Simple Factory vs Factory Method: simple factory gives a way to encapsulate the object creation, but it does not give a facility to vary the product being created (This facility comes due to subclassing of creator classes).
+
+* Factory method pattern is all about separating and encapsulating the object creation logic from object manipulation logic, so that client code is decoupled from implementation and coding to abstraction/interfaces. Factory code still deals with the concrete classes (as object creation is core part of Java).
+
+* Dependency Inversion Principle is stronger statement than "depend upon interfaces than implementation" becuase it suggests not that high level classes should not depend upon low level classes but should both depend upon abstraction of low level classes.
+
+* Guidelines to observe to follow DI principle:
+	* No variable should hold a reference to concrete class (this is violated when we use 'new' keyword, use factory to get instance).
+	* No class should derive from concrete class  (if it is, we are depending on concrete class, not good).
+	* No method should override the implemented method of any of its base class (if it is, that means base class is not the ideal abstraction to start with).
+* It is impossible to follow all above, but atleast thrive for them.
+
+* An abstract family gives us an interface for creating a family of products. This way we decouple the client code from the actual factory that creates products. This allows us to implement factories for various context that produce products.
+
+* Factory method and Abstract factory both decouples application from implementations but factory method do it via inheritance while abstract factory do it via object composition.
+
+* Factory method just needs a method because it creates only one product while abstract factory needs interface brcasue it creates family of products.
+
+* Concrete factories of abstract factory uses factory method to create their products.
