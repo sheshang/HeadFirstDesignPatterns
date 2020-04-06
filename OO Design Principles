@@ -13,3 +13,9 @@
 (Introduced in Decorator pattern)
 
 5. Classes should be open for extension but closed for modification.
+
+(Introduced in Factory method pattern)
+
+6. Dependency Inversion: Depend on the abstractions rather than concrete classes.
+
+
