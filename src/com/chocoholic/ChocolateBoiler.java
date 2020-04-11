@@ -4,7 +4,7 @@ public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
 
-    private static ChocolateBoiler chocolateBoiler = new ChocolateBoiler();
+    private volatile static ChocolateBoiler chocolateBoiler;
     
     private ChocolateBoiler(){
         empty = true;
@@ -12,6 +12,13 @@ public class ChocolateBoiler {
     }
     
     public static ChocolateBoiler getChocolateBoilerInstance(){
+        if(chocolateBoiler == null){
+            synchronized (ChocolateBoiler.class){
+                if(chocolateBoiler == null){
+                    chocolateBoiler = new ChocolateBoiler();
+                }
+            }
+        }
         return chocolateBoiler;
     }
     
