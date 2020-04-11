@@ -1,0 +1,20 @@
+* Having a single object declared as global variable is not wrong but it lives through out the scope of project and if they singleton is resource heavy, it affects efficiency.
+
+* Instantiation of object requires constructor and having private constructor with static class method to call the constructor is the key for creating singleton object with lazy instantiation.
+
+* Class implementing a singleton pattern is more than that, it a general purpose class with its own set of data and method.
+
+* Java's singleton pattern uses private constructor, static method and static variable.
+
+* Multithreading still can create multiple instances, so use 'synchronized' key word for getInstance() method. Synchronized adds overhead everytime getInstance() gets called.
+** Use synchronized if calls to the getInstance() are less. con: synschronized is expensive.
+** Move to eagerly created static instance if creation calls are more and instance is not resource heavy.
+** Use double checking with synchronized so that synchronized is called only on first call of getInstance(). con: overkill to problem may times.
+
+* Static class with all static data and methods as an alternative to singleton: It will be a problem considering the static initializations in Java.
+* Multiple class loaders can create multiple copies of class and so multiple instances. use your own class loader in such cases.
+* Subclassing the singleton code: it's a chaos keeping in the mind we need private constructor and static instance variable.
+* Instance as global variable: provides global access but not to the single instance. Also global references pollute the namespace.
+
+
+
