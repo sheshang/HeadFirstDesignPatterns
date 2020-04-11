@@ -1,2 +1,4 @@
-# HeadFirstDesignPatterns
-This repo contains the examples created while reading the HeadFirst Design Patterns
+# Singleton Pattern:
+ensures class has only one instance and provides a global access point to it.
+
+Example: Chocolate Factory - Choc-O-Holic
