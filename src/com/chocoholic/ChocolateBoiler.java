@@ -4,17 +4,14 @@ public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
 
-    private static ChocolateBoiler chocolateBoiler;
+    private static ChocolateBoiler chocolateBoiler = new ChocolateBoiler();
     
     private ChocolateBoiler(){
         empty = true;
         boiled = false;
     }
     
-    public static synchronized ChocolateBoiler getChocolateBoilerInstance(){
-        if(chocolateBoiler == null){
-            chocolateBoiler = new ChocolateBoiler();
-        }
+    public static ChocolateBoiler getChocolateBoilerInstance(){
         return chocolateBoiler;
     }
     
