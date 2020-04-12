@@ -22,7 +22,8 @@ public class RemoteLoader {
         LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
         LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
 
-        CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
+        CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+        CeilingFanLowCommand ceilingFanLow = new CeilingFanLowCommand(ceilingFan);
         CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 
         GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
@@ -33,23 +34,33 @@ public class RemoteLoader {
 
         remote.setCommand(0, livingRoomLightOn, livingRoomLightOff);
         remote.setCommand(1, kitchenLightOn, kitchenLightOff);
-        remote.setCommand(2, ceilingFanOn, ceilingFanOff);
-        remote.setCommand(3, stereoOnWithCD, stereoOff);
-        remote.setCommand(4, garageDoorUp, garageDoorDown);
+        remote.setCommand(2, stereoOnWithCD, stereoOff);
+        remote.setCommand(3, garageDoorUp, garageDoorDown);
+        remote.setCommand(4, ceilingFanHigh, ceilingFanOff);
+        remote.setCommand(5, ceilingFanLow, ceilingFanOff);
 
         System.out.println(remote);
 
         remote.onButtonWasPressed(0);
         remote.offButtonWasPressed(0);
+        System.out.println();
         remote.onButtonWasPressed(1);
-        remote.offButtonWasPressed(1);
+        remote.undoButtonWasPressed();
+        System.out.println();
         remote.onButtonWasPressed(2);
         remote.offButtonWasPressed(2);
+        System.out.println();
         remote.onButtonWasPressed(3);
-        remote.offButtonWasPressed(3);
-
-
-
+        remote.undoButtonWasPressed();
+        remote.undoButtonWasPressed();
+        System.out.println();
+        remote.onButtonWasPressed(4);
+        remote.offButtonWasPressed(4);
+        remote.undoButtonWasPressed();
+        remote.onButtonWasPressed(5);
+        remote.undoButtonWasPressed();
+        remote.offButtonWasPressed(5);
+        System.out.println();
 
     }
 }

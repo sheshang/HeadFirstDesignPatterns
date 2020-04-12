@@ -13,11 +13,14 @@ public class Stereo {
         System.out.println("CD is entered");
     }
 
+    //volume can be set various commands like the speed of fan
     public void setVolume(int i){
         System.out.println("Volume is set at {"+i+"} level");
     }
 
-    public void off(){}
+    public void off(){
+        System.out.println("Stereo is Off");
+    }
 
     public void setDVD(){}
 

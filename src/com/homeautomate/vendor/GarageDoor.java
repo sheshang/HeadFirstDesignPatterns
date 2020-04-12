@@ -25,6 +25,7 @@ public class GarageDoor {
     }
 
     public void lightOff(){
-
+        System.out.print("Garage ");
+        light.off();
     }
 }
