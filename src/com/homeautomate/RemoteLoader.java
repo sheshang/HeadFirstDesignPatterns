@@ -32,12 +32,19 @@ public class RemoteLoader {
         StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
         StereoOffCommand stereoOff = new StereoOffCommand(stereo);
 
+        Command[] partyOn = {livingRoomLightOn, stereoOnWithCD};
+        Command[] partyOff = {livingRoomLightOff, stereoOff};
+
+        MacroCommand partyOnMacro = new MacroCommand(partyOn);
+        MacroCommand partyOffMacro = new MacroCommand(partyOff);
+
         remote.setCommand(0, livingRoomLightOn, livingRoomLightOff);
         remote.setCommand(1, kitchenLightOn, kitchenLightOff);
         remote.setCommand(2, stereoOnWithCD, stereoOff);
         remote.setCommand(3, garageDoorUp, garageDoorDown);
         remote.setCommand(4, ceilingFanHigh, ceilingFanOff);
         remote.setCommand(5, ceilingFanLow, ceilingFanOff);
+        remote.setCommand(6, partyOnMacro, partyOffMacro);
 
         System.out.println(remote);
 
@@ -60,6 +67,9 @@ public class RemoteLoader {
         remote.onButtonWasPressed(5);
         remote.undoButtonWasPressed();
         remote.offButtonWasPressed(5);
+        System.out.println();
+        remote.onButtonWasPressed(6);
+        remote.offButtonWasPressed(6);
         System.out.println();
 
     }
