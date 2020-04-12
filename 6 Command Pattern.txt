@@ -1,0 +1,13 @@
+*  Null object is very useful in the cases when we don't have any meaningful object to return and still we don't want the client to have responsibility of null checking.
+
+* Command pattern can be used to implement request queues, job queues, schedulers and thread pools.
+
+* Command pattern can also be used to log the requests. Commands can have load() and store() like undo() method. Whenever any command is performed it is stored in somewhere. In case of program crash, store the all history of commands executed on program and re execute them to achieve the same level of program as before. Transactions, Serialization are few scenarios to name.
+
+* In command pattern we decouple an object making a request from the objects that knows how to perform the requests.
+
+* Command object is at the center of this decouple, encapsulating receiver and actions.
+
+* Invoker makes  request of command objects by calling its execute() method, which invokes those actions on the receiver.
+
+* Macro command is the extension to the simple command that allows multiple commands to be invoked.
